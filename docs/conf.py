@@ -48,7 +48,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'ndi_anambra'
-copyright = u'2016, ChrisDev Limited'
+copyright = u'2016, Ndi Anambra'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -268,9 +268,9 @@ texinfo_documents = [
 
 # Bibliographic Dublin Core info.
 epub_title = u'ndi_anambra'
-epub_author = u'Christopher Clarke'
-epub_publisher = u'ChrisDev Limited'
-epub_copyright = u'2016, ChrisDev'
+epub_author = u'Nonso Ibenegbu'
+epub_publisher = u'Ndi Anambra Aberdeen'
+epub_copyright = u'2016, Ndi Anambra Aberdeen'
 
 # The basename for the epub file. It defaults to the project name.
 #epub_basename = u'Managing Content with Wagtail CMS'
