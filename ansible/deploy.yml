@@ -1,6 +1,8 @@
 ---
 - hosts: all
-  remote_user: django 
+  remote_user: root
+  become: true
+  become_user: root
 
   tasks:
     - name: update the source via hg
@@ -15,6 +17,7 @@
     - name: Update the source via git
       git: repo={{ project_repo }} 
            dest={{ sites_dir }}/{{ project_name }}
+           accept_hostkey=yes
            force=yes
       when: vcs == 'git'
       tags:

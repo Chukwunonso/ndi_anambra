@@ -22,6 +22,8 @@ help:
 	@echo "  livereload               Start Server with livereload functionality"
 	@echo "  node_modules             Install Node modules"
 	@echo "  compress_images          Minify Images used in site"
+	@echo "  end_maint                End maitainance mode"
+	@echo "  nginx                    Nginx only
 
 .PHONY: requirements
 
@@ -159,11 +161,25 @@ provision:
 		$(PLAYBOOK) -i $(DEPLOY_ENV) provision.yml --skip-tags user; \
 	)
 
+nginx:
+	$(call ECHO_BLUE, Provision the $(DEPLOY_ENV) server )
+	(\
+		cd ansible; \
+		$(PLAYBOOK) -i $(DEPLOY_ENV) provision.yml --tags nginx_le; \
+	)
+
 deploy:
 	$(call ECHO_BLUE, deploy changes to the $(DEPLOY_ENV) server )
 	(\
 		cd ansible; \
 		$(PLAYBOOK) -i $(DEPLOY_ENV) deploy.yml;  \
+	)
+
+end_maint:
+	$(call ECHO_BLUE, deploy changes to the $(DEPLOY_ENV) server )
+	(\
+		cd ansible; \
+		$(PLAYBOOK) -i $(DEPLOY_ENV) deploy.yml --tags end_maint;  \
 	)
 
 livereload:
