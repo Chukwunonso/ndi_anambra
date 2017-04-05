@@ -42,7 +42,8 @@
 
 // Colors
 
-$primary: map-get($foundation-palette, primary);
+//$primary: map-get($foundation-palette, primary);
+$primary: #002f00;
 $secondary: map-get($foundation-palette, secondary);
 $primary-dark: #303F9F;
 $off-white : #F8F8FA;

@@ -5,24 +5,34 @@
 <div data-sticky-container>
  <div data-sticky data-options="marginTop:0;" style="width:100%;z-index:10000;">
 
+     {% comment %}
     <div id="social_bar">
-        <div class="row" style="max-width: 55%;">
+        <div class="row" style="max-width: 25%;">
          <a href="{{ settings.pages.SocialMediaSettings.facebook }}" title="Facebook" target="_blank"><i class="fa fa-facebook-square"></i></a>
          <a href="{{ settings.pages.SocialMediaSettings.twitter_name }}" title="Twitter" target="_blank"><i class="fa fa-twitter-square"></i></a>
          <a href="{{ settings.pages.SocialMediaSettings.github }}" title="Github" target="_blank"><i class="fa fa-github-square"></i></a>
-         <a href="mailto:jollynony@yahoo.com" title="Mail" target="_blank"><i class="fa fa-envelope"></i></a>
+         <a href="mailto:info@ndianambraaberdeen.org" title="Mail" target="_blank"><i class="fa fa-envelope"></i></a>
          </div>
     </div>
+     {% endcomment %}
 
-    <div class="title-bar" data-responsive-toggle="menu" data-hide-for="large">
+     <div class="title-bar">
+
+        <div class="title-bar" data-responsive-toggle="menu" data-hide-for="large">
       <button class="menu-icon" type="button" style="background: transparent;"data-toggle></button>
-      <div class="title-bar-title">Ndi Anambra Aberdeen</div>
+      <div class="title-bar-title">
+          <img src="{% static 'img/logo.png' %}">
+      </div>
     </div>
 
-    <div class="top-bar" id="menu">
+        <div class="top-bar" id="menu">
       <div class="top-bar-left hide-for-small-only">
         <ul class="dropdown menu">
-          <li class="menu-text"><a href="{% pageurl site_root %}" style="padding: 0;">Ndi Anambra Aberdeen</a></li>
+          <li class="menu-text">
+              <a href="{% pageurl site_root %}" style="padding: 0;">
+                  <img src="{% static 'img/logo.png' %}">
+              </a>
+          </li>
         </ul>
       </div>
       <div class="top-bar-right">
@@ -56,5 +66,6 @@
       </div>
     </div>
 
+     </div>
   </div>
 </div>
