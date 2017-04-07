@@ -5,6 +5,7 @@
 {% block body_class %}template-{{ self.get_verbose_name|slugify }}{% endblock %}
 
 {% block content %}
+	{% comment %}
     <div id="intro">
         <div class="row text-center">
             <div class="medium-10 medium-centered columns">
@@ -16,7 +17,19 @@
             </div>
         </div>
     </div>
+    {% endcomment %}
 
+	<!-- HERO SECTION -->
+	<section class="hero">
+		<div class="row">
+			<div class="large-4 columns">
+				<h3 class="hide-for-large-up">{{ self.title_text|richtext }}</h3>
+			</div>
+			<div class="large-4 columns">
+				{{ self.body|richtext }}
+			</div>
+		</div>
+	</section>
 	<div id="section">
 	    <div id="icons" class="row text-center">
 	        <h4>Featuring</h4>

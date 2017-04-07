@@ -5,32 +5,40 @@
 <div data-sticky-container>
  <div data-sticky data-options="marginTop:0;" style="width:100%;z-index:10000;">
 
-     {% comment %}
     <div id="social_bar">
-        <div class="row" style="max-width: 25%;">
-         <a href="{{ settings.pages.SocialMediaSettings.facebook }}" title="Facebook" target="_blank"><i class="fa fa-facebook-square"></i></a>
-         <a href="{{ settings.pages.SocialMediaSettings.twitter_name }}" title="Twitter" target="_blank"><i class="fa fa-twitter-square"></i></a>
-         <a href="{{ settings.pages.SocialMediaSettings.github }}" title="Github" target="_blank"><i class="fa fa-github-square"></i></a>
-         <a href="mailto:info@ndianambraaberdeen.org" title="Mail" target="_blank"><i class="fa fa-envelope"></i></a>
+        <div class="row" style="max-width: 80%; display: inline-block;">
+            <div class="social-icon">
+                <a href="{{ settings.pages.SocialMediaSettings.facebook }}" title="Facebook" target="_blank"><i class="fa fa-facebook-square"></i></a>
+            </div>
+            <div class="social-icon">
+                <a href="{{ settings.pages.SocialMediaSettings.twitter_name }}" title="Twitter" target="_blank"><i class="fa fa-twitter-square"></i></a>
+            </div>
+            <div class="social-icon">
+                <a href="{{ settings.pages.SocialMediaSettings.github }}" title="Github" target="_blank"><i class="fa fa-github-square"></i></a>
+            </div>
+            <div class="social-icon">
+                <a href="mailto:info@ndianambraaberdeen.org" title="Mail" target="_blank"><i class="fa fa-envelope"></i></a>
+            </div>
          </div>
     </div>
-     {% endcomment %}
 
-     <div class="title-bar">
+     <div class="title-bar main-nav-bar">
 
-        <div class="title-bar" data-responsive-toggle="menu" data-hide-for="large">
-      <button class="menu-icon" type="button" style="background: transparent;"data-toggle></button>
-      <div class="title-bar-title">
-          <img src="{% static 'img/logo.png' %}">
+        <div class="title-bar-title" data-responsive-toggle="menu" data-hide-for="large">
+      <button class="menu-icon" type="button" data-toggle></button>
+      <div class="title-bar-title hide-for-large-only">
+         NAA
       </div>
     </div>
 
-        <div class="top-bar" id="menu">
+    <div class="top-bar menu-title-bar" id="menu">
       <div class="top-bar-left hide-for-small-only">
         <ul class="dropdown menu">
           <li class="menu-text">
               <a href="{% pageurl site_root %}" style="padding: 0;">
-                  <img src="{% static 'img/logo.png' %}">
+                  <div class="hide-for-large-only">
+                      <img src="{% static 'img/logo.png' %}">
+                  </div>
               </a>
           </li>
         </ul>
