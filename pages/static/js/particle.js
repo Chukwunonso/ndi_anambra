@@ -436,28 +436,18 @@ var pJS = function(tag_id, params){
     switch(p.shape){
 
       case 'circle':
-      if (city_counter >= COUNTER_LIMIT) {
-        city_counter = 0;
-        show_text = !show_text;
-      }
-      if (show_text) {
-        font_size = font_size - 0.01;
-          pJS.canvas.ctx.font = font_size + "px Arial";
-        pJS.canvas.ctx.fillText(city, p.x, p.y)
-      } else {
-          pJS.canvas.ctx.arc(p.x, p.y, radius, 0, Math.PI * 2, false);
-          if (city_counter < 10) {
-            city = cities[Math.floor(Math.random() * cities.length)];
-            console.log(city)
-          }
-          if (city_counter >= COUNTER_LIMIT/2) {
-            show_text = !show_text;
-            city_counter = 0;
-            font_size = font_size_initial;
-          console.log('Cities length' , cities.length);
-			}
-		}
-		city_counter = city_counter + 1;
+        pJS.canvas.ctx.arc(p.x, p.y, radius, 0, Math.PI * 2, false);
+      break;
+
+      case 'text':
+        if (city_counter >= COUNTER_LIMIT) {
+          city = cities[Math.floor(Math.random() * cities.length)];
+          city_counter = 0;
+        }
+        pJS.canvas.ctx.font = font_size + "px Arial";
+        pJS.canvas.ctx.arc(p.x, p.y, radius + 3, 0, Math.PI * 2, false);
+        pJS.canvas.ctx.fillText(city, p.x+8 , p.y+8);
+        city_counter = city_counter + 1;
       break;
 
       case 'edge':
