@@ -1,3 +1,5 @@
+from datetime import date
+
 from django.db import models
 
 from wagtail.wagtailcore import blocks
@@ -13,6 +15,8 @@ from wagtail.wagtailadmin.edit_handlers import (
 from wagtail.wagtailsearch import index
 from utils.models import LinkFields, RelatedLink, CarouselItem
 from wagtail.contrib.settings.models import BaseSetting, register_setting
+
+from events.models import EventPage
 
 
 @register_setting
@@ -72,6 +76,14 @@ class HomePage(Page):
     search_fields = Page.search_fields + [
         index.SearchField('body'),
     ]
+
+
+    def get_context(self, request):
+        context = super(HomePage, self).get_context(request)
+        events = EventPage.objects.live().descendant_of(self)
+        events = events.filter(date_from__gte=date.today())
+        context['events'] = events.order_by('date_from')
+        return context
 
     class Meta:
         verbose_name = "Homepage"

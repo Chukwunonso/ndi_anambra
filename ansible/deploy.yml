@@ -38,7 +38,6 @@
       tags:
            - django
 
-
     - name: Run Django collectstatic
       shell: . {{ virtualenvs_dir }}/{{ project_name }}-env/bin/activate
             && python manage.py collectstatic --noinput --settings={{ project_name }}.settings.production
