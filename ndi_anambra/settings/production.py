@@ -120,7 +120,3 @@ LOGGING = {
         }
     }
 }
-
-COMPRESS_ENABLED = True
-
-
