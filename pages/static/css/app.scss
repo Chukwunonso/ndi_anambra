@@ -56,9 +56,9 @@ $naa-orange: #ffdb5b;
 
 
 // Fonts
-$header-font-family: 'Lato', Helvetica, sans;
-$body-font-family: 'Lato', Helvetica, sans;
-$paragraph-font-family: 'Lato', Helvetica, sans;
+$header-font-family: 'Baloo Bhaina', cursive;
+$body-font-family: 'Baloo Bhaina', cursive;
+$paragraph-font-family: 'Open Sans', sans-serif;
 
 $header-font-color: $dove-gray !default;
 
@@ -79,7 +79,13 @@ $header-font-color: $dove-gray !default;
   width: 100%;
   height: 100%;
 }
+p {
+  font-family: 'Open Sans', sans-serif;
+}
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', sans-serif;
+}
 body {
   background: $off-white;
   color: $dove-gray;
@@ -202,10 +208,6 @@ ul.share-buttons .fa {min-width: 30px;}
 
 .info {padding: 15px;}
 
-
-#carousel {
-  margin-top: 30px;
-}
 
 
 #intro {
@@ -468,10 +470,14 @@ footer {
   color: $naa-orange;
 }
 .hero {
+  h3, p {
+    font-family: 'Ubuntu', sans-serif;
+    color: $naa-orange;}
 
-  h3, p {color: $naa-orange;}
-
-  h3 {font-weight: 600;line-height: 1;}
+  h3 {
+    font-weight: 600;
+    line-height: 1;
+  }
 
 }
 
@@ -487,10 +493,13 @@ footer {
 }
 
 #particles-js {
-  margin-top: 0;
   width: 100%;
   height: 100%;
   position: relative;
   background-size: cover;
   background-repeat:no-repeat;
+}
+
+.below-hero {
+  padding-top: 1rem;
 }

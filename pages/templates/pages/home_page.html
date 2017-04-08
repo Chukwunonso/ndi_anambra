@@ -21,7 +21,7 @@
 
 	<!-- HERO SECTION -->
 	<section class="hero" id="particles-js">
-		<div class="row">
+		<div class="row text-center">
 			<div class="large-5 columns light-background">
 				<h3 class="hide-for-large-up">{{ self.title_text|richtext }}</h3>
 			</div>
@@ -30,6 +30,19 @@
 			</div>
 		</div>
 	</section>
+    <section>
+        <div class="row below-hero">
+            <div class="medium-8 columns">
+                <div id="carousel">
+                    {% include "pages/includes/bx_carousel.html" with carousel_items=self.carousel_items.all only  %}
+                </div>
+            </div>
+            <div class="medium-4 columns">
+                <p><img src="http://placehold.it/400x200&text=Other cool article" alt="article promo image" alt="advertisement for deep fried Twinkies"></p>
+                <p><img src="http://placehold.it/400x200&text=Other cool article" alt="article promo image"></p>
+            </div>
+        </div>
+    </section>
 	<div id="section">
 	    <div id="icons" class="row text-center">
 	        <h4>Featuring</h4>

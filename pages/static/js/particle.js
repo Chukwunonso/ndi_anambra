@@ -12,14 +12,9 @@ var pJS = function(tag_id, params){
 
   var canvas_el = document.querySelector('#'+tag_id+' > .particles-js-canvas-el');
   var city_counter = 0;
-  var show_text = true;
-	var font_size_initial = 30;
-  var font_size = font_size_initial;
-  var shrink_font = true;
+  var font_size = 20;
   var city = 'Awka';
-  // var cities = ['Awka', 'Onitsha', 'Enugwu-Ukwu', 'Amawbia', 'Okija', 'Obosi']
   var cities = [ 'Abacha', 'Abagana', 'Abatete', 'Abba', 'Achalla', 'Achina', 'Adazi-Ani', 'Adazi-Enu', 'Adazi-Nnukwu', 'Agbudu', 'Agukwu-Nri', 'Aguleri', 'Agulu', 'Aguluezechukwu', 'Aguluzigbo', 'Ajalli', 'Akata', 'Akili-Ogidi', 'Akili-Ozizor', 'Akpo', 'Akpu', 'Akwaeze', 'Akwaihedi', 'Akwaukwu', 'Alaohia', 'Alor', 'Amaetiti', 'Amansea', 'Amanuke', 'Amaokpala', 'Amawbia', 'Amesi', 'Amichi', 'Amiyi', 'Amorka', 'Anaku', 'Atani', 'Awa', 'Awba-Ofemili', 'Awgbu', 'Awka', 'Awka-Etiti', 'Awkuzu', 'Azia', 'AzigboEbenator', 'Ebenebe', 'Ekwulobia', 'Ekwulumili', 'EnugwuOtuAguleri', 'Enugwu_Aguleri', 'Enugwu-Agidi', 'Enugwu-Ukwu', 'Enugwu-Umuonyia', 'Eziagu', 'EziaguluOtuAguleri', 'Ezinato', 'Ezinifite-Aguata', 'Ezinifite-Nnewi', 'Eziowelle', 'Ezira', 'Ichi', 'Ichida', 'Ideani', 'IfiteOgwari', 'Ifitedunu', 'Igbakwu', 'Igbariam', 'Igbedo', 'Igboukwu', 'Ihembosi', 'Ihiala', 'Ihite', 'Ikem-Ivite', 'Ikenga', 'Inoma-Akator', 'Iseke', 'Isiagu', 'Isu_Aniocha', 'Isulo', 'Isuofia', 'IyioraAnam', 'LiluMbaukwu', 'Mbosi', 'Mgbakwu', 'Mmiata', 'Mputu', 'Nando', 'Nanka', 'Nawfia', 'Nawfija', 'Nawgu', 'Ndikelionwu', 'Ndiokolo', 'Ndiokpalaeke', 'Ndiokpalaeze', 'Ndiowu', 'Ndiukwuenu', 'Neni', 'Nibo', 'Nimo', 'Nise', 'Nkerehi', 'Nkpologwu', 'Nkpor', 'Nkwelle-Ezunaka', 'Nnewi', 'Nnobi', 'Nnokwa', 'Nsugbe', 'Nteje', 'Nzam', 'Oba', 'Obeagwe', 'Obeledu', 'Obosi', 'Obuluhu', 'OchucheUmuodu', 'Odiukwuenu', 'Odekpe', 'Ogbakugba', 'Ogbodi', 'Ogboji', 'Ogbunike', 'Ogbunka', 'Ogidi', 'Ogwu-Aniocha', 'Ogwuikpele', 'Ohita', 'Ojoto', 'Okija', 'Oko', 'Okpeze', 'Okpoko', 'Okpuno', 'Omasi', 'Omogho', 'Omor', 'Oneh', 'Onitsha', 'Onneh', 'Oraeri', 'Oraifite', 'Oraukwu', 'Oroma-Etiti', 'Orsumoghu', 'Ossamala', 'Osumenyi', 'Otuocha', 'Owelle', 'Owerre-Ezukala', 'Ozubulu', 'Ubaha', 'Ubaha-Akwaosa', 'Ubuluisiuzor', 'Ufuma', 'Uga', 'Ugbene', 'Ugnenu', 'Uhuala', 'Uke', 'Ukpo', 'Ukpor', 'Ukwulu', 'Uli', 'Umuawulu', 'Umuchu', 'Umuchukwu', 'Umudioka', 'UmudoraAnam', 'Umueje', 'UmuenwelumAnam', 'Umuerum', 'UmuezeAnam', 'UmuikwuAnam', 'Umuleri', 'Umumbo', 'Umunachi', 'Umunankwo', 'Umunya', 'Umunze', 'UmuobaAnam', 'Umuoba-AbegbuAnam', 'Umuoji', 'Umuomaku', 'Umuona', 'Umuzu', 'Unubi', 'Urum', 'Utuh']
-  var collect_cities = [];
 
   /* particles.js variables with default values */
   this.pJS = {
@@ -432,6 +427,7 @@ var pJS = function(tag_id, params){
 
     pJS.canvas.ctx.fillStyle = color_value;
     pJS.canvas.ctx.beginPath();
+    pJS.canvas.ctx.font = font_size + "px Arial";
 
     switch(p.shape){
 
@@ -444,7 +440,6 @@ var pJS = function(tag_id, params){
           city = cities[Math.floor(Math.random() * cities.length)];
           city_counter = 0;
         }
-        pJS.canvas.ctx.font = font_size + "px Arial";
         pJS.canvas.ctx.arc(p.x, p.y, radius + 3, 0, Math.PI * 2, false);
         pJS.canvas.ctx.fillText(city, p.x+8 , p.y+8);
         city_counter = city_counter + 1;
