@@ -1,7 +1,7 @@
 from .base import *  # flake8: noqa
 
 
-DEBUG = env.bool('DJANGO_DEBUG', default=False)
+DEBUG = env.bool('DJANGO_DEBUG_NEW', default=False)
 
 TEMPLATES[0]['OPTIONS']['debug'] = DEBUG
 
