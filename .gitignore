@@ -16,3 +16,5 @@ ansible/host_vars/*
 env.example
 env.production
 pages/static/libs
+pages/copy_templates/
+problems/encountered/

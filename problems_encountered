@@ -1,0 +1,28 @@
+Couldn't connect with ansible
+Solution:
+ansible all -m ping -become-user=root -u root -vvvv
+
+If problem persists
+logon with regular ssh root@ndianambraaberdeen.org
+
+If this works
+Then run the run ansible all -m ping ... again
+
+Couldn't run github deploy from laptop.
+Had to ssh into remote machine.
+Move the ssh deploy key from the project to the main account
+Run the following commands
+cp /home/naa_web/.ssh/id_rsa /root/.ssh/id_rsa
+&
+cp /home/naa_web/.ssh/id_rsa.pub /root/.ssh/id_rsa.pub
+
+So that github can see them
+
+Ran into problem with gpg
+deleted signing from .gitconfig
+to open run git config --global --edit
+
+
+Remember local run are like so python manage.py runserver --settings=ndi_anambra.settings.dev
+
+To activate local virtualenv run source venv/bin/activate

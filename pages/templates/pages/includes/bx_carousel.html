@@ -8,7 +8,7 @@
               {% if carousel_item.embed_url %}
                   {{ carousel_item.embed_url|embed:1000 }}
               {% else %}
-                {% image carousel_item.image width-1400 as carousel_imagedata %}
+                {% image carousel_item.image max-900x400 as carousel_imagedata %}
                     <img class="rsImg" src="{{ carousel_imagedata.url }}" title="{{ carousel_item.caption }}" alt="{{ carousel_imagedata.alt }}"/>
                {% endif %}
              {% if carousel_item.link %}</a>{% endif %}

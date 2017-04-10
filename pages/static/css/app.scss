@@ -442,12 +442,17 @@ footer {
 }
 
 /*** Custom Styles ***/
+.logo {
+  top: 0;
+  position: absolute;
+  width: 130px;
+  height: 130px;
+}
+
 .hero {
   background-image: url('/#{$static}/img/banner.png');
   background-repeat:no-repeat;
-  padding: 4rem 4rem;
-  top: 0;
-  left: 0;
+  padding-bottom: 8rem;
   width: 100%;
   height: 100%;
   position: relative;
@@ -502,4 +507,65 @@ footer {
 
 .below-hero {
   padding-top: 1rem;
+}
+
+/* Events Widget */
+.event-widget {
+  box-shadow: 0 5px 8px rgba(0,0,0,.3);
+  padding-bottom: 1rem;
+  h5 {
+    padding-left: 1rem;
+  }
+}
+.event {
+  display: table;
+  font-size: small;
+}
+
+.event-date {
+  margin: 0 auto 1rem;
+  display: table-cell;
+  width: auto;
+
+  .event-month {
+    margin: 0;
+    background: #eee;
+    padding: 0.5rem 0.5rem;
+    text-align: center;
+  }
+
+  .event-day {
+    margin: 0;
+    border: 1px solid #eee;
+    padding: 0 1rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+
+.event-desc {
+  padding: 0 0 0 1rem;
+  text-align: left;
+  display: table-cell;
+  vertical-align: top;
+
+  .event-desc-header {
+    margin: 0 0 0.5rem 0;
+    padding: 0;
+  }
+
+  .event-desc-detail {
+    margin: 0 0 0.25rem;
+    padding: 0;
+  }
+
+  .event-desc-time {
+    font-weight: bold;
+  }
+
+  .rsvp.button {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin: 0;
+  }
 }

@@ -27,7 +27,9 @@
         <div class="title-bar-title" data-responsive-toggle="menu" data-hide-for="large">
       <button class="menu-icon" type="button" data-toggle></button>
       <div class="title-bar-title hide-for-large-only">
-         NAA
+          <div class="logo small-logo">
+              <img src="{% static 'img/naa_logo.png' %}">
+          </div>
       </div>
     </div>
 
@@ -36,13 +38,14 @@
         <ul class="dropdown menu">
           <li class="menu-text">
               <a href="{% pageurl site_root %}" style="padding: 0;">
-                  <div class="hide-for-large-only">
-                      <img src="{% static 'img/logo.png' %}">
+                  <div class="hide-for-large-only logo">
+                      <img src="{% static 'img/naa_logo.png' %}">
                   </div>
               </a>
           </li>
         </ul>
       </div>
+
       <div class="top-bar-right">
         <ul class="vertical medium-horizontal menu" data-responsive-menu="drilldown medium-dropdown">
           <li class="{% if calling_page.url == site_root %} active{% endif %}"><a href="{% pageurl site_root %}"><strong>Home</strong></a></li>
