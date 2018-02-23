@@ -1,36 +1,26 @@
-{% load wagtailcore_tags wagtailimages_tags %}
+{% load static pages_tags wagtailcore_tags wagtailimages_tags wagtailembeds_tags %}
 
 <div class="row event-widget">
-    <h5>{{heading}}</h5>
+    <h5>Events</h5>
   <div class="columns small-centered">
-    <article class="event">
+      {%  for event in events|slice:":3" %}
+        <article class="event">
 
-        <div class="event-date">
-          <p class="event-month">May</p>
-          <p class="event-day">13</p>
-        </div>
+            <div class="event-date">
+              <p class="event-month">{{ event.date_from|date:"M" }}</p>
+              <p class="event-day">{{ event.date_from|date:"d" }}</p>
+            </div>
 
-        <div class="event-desc">
-          <p class="event-desc-header">Monthly Meeting: John Skinner Center</p>
-          <a href="#" class="rsvp button">RSVP &amp; Details</a>
-        </div>
-
-      </article>
-
-      <hr>
-
-      <article class="event">
-
-        <div class="event-date">
-          <p class="event-month">June</p>
-          <p class="event-day">10</p>
-        </div>
-
-        <div class="event-desc">
-          <p class="event-desc-header">Monthly Meeting: John Skinner Center</p>
-          <a href="#" class="rsvp button">RSVP &amp; Details</a>
-        </div>
-
-      </article>
+            <div class="event-desc">
+              <p class="event-desc-header">{{ event.title }}</p>
+              <a href="{{ event.url }}" class="rsvp button">RSVP &amp; Details</a>
+            </div>
+        </article>
+          {% if not forloop.last %}
+          <hr>
+          {% endif %}
+          {% empty %}
+          <h4>No Events Coming up.</h4>
+      {%  endfor %}
   </div>
 </div>
