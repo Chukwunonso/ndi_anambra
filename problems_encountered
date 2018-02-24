@@ -26,3 +26,28 @@ to open run git config --global --edit
 Remember local run are like so python manage.py runserver --settings=ndi_anambra.settings.dev
 
 To activate local virtualenv run source venv/bin/activate
+
+22.02.2018
+Tried to run the django dev server but hit no ndi_anambra database
+
+Created a new standard user:
+On linux use sudo adduser nonso
+On mac use System Preferences to add a standard user
+Then run `sudo -u postgres psql`
+
+Create user `nonso` for example
+Continue with
+https://www.codementor.io/engineerapart/getting-started-with-postgresql-on-mac-osx-are8jcopb
+
+
+Couldn't find the site: with root@ndianambraaberdeen.org nor on naa_web@...
+See: /Users/nonso/ndi_anambra/ndi_anambra/ansible/group_vars/all
+
+
+After running provision.yml site went off line! 23.02.2018
+
+So I had changed the postgres password because I was prompted in the play. To play I had uncommented
+the ansible task to create database fearing the worst.
+
+So to discover this I ran `supervisorctrl tail ndi_anambra` as ssh root
+When I changed the .env password contained in the remote everything worked. Including the changes.

@@ -1,19 +1,9 @@
 /* TEAM */
 
-Lead Developer:Christopher Clarke
-Contact: cclarke [at] chrisdev.com
-Twitter: @realchrisdev
-From:Tunapuna, Trinidad and Tobago
+Lead Developer:Nonso Ibenegbu
+Contact: nonso.ibenegbu [at] outlook.com
+From:Aberdeen, UK
 
-Web Design and Graphics:Lendl Smith
-Contact: lendl.smith [at] chrisdev.com
-Twitter: @lendlsmith
-From:Tunapuna, Trinidad and Tobago
-
-Developer: Parbhat Puri
-Contact: 2012ecs17 [at] smvdu.ac.in 
-Twitter: @parbhatpuri
-From: Kurukshetra, Haryana, India 
 
 /* SITE */
 Language:English
