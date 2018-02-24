@@ -82,14 +82,13 @@
                             <div class="medium-4 columns hide-for-small-only">
                                 {%  if contact.post_code %}
                                     {% get_google_maps_key as google_maps_key %}
-                                    <img src="https://maps.googleapis.com/maps/api/staticmap?center={{ contact.post_code }}&zoom=13&size=300x280&maptype=roadmap
-                                    &sensor=false&markers=color:green|{{ contact.post_code }}{% if google_maps_key %}&key={{ google_maps_key }}{% endif %}"/>
+                                    <img src="https://maps.googleapis.com/maps/api/staticmap?center={{ contact.post_code }}&zoom=13&scale=false&size=300x280&maptype=roadmap&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0x7ed5ff%7Clabel:%7C{{ contact.post_code }}"/>
                                 {% endif %}
                             </div>
                         </div>
                         <div id="copyright">
                             <div class="row text-center">
-                                <p>Copyright © {% now "Y" %} Ndi Anambra Aberdeen. All rights reserved <br>Made with &hearts; by <a href="http://kliasoft.com"><em>Kliasoft Ltd</em></a>. <br></p>
+                                <p>Copyright © 2016 - {% now "Y" %} Ndi Anambra Aberdeen. All rights reserved <br>Made with &hearts; by <a href="http://kliasoft.com"><em>Kliasoft Ltd</em></a>. <br></p>
                             </div>
                         </div>   
                     </footer>                    
