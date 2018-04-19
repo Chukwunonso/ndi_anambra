@@ -82,7 +82,9 @@
                             <div class="medium-4 columns hide-for-small-only">
                                 {%  if contact.post_code %}
                                     {% get_google_maps_key as google_maps_key %}
-                                    <img src="https://maps.googleapis.com/maps/api/staticmap?center={{ contact.post_code }}&zoom=13&scale=false&size=300x280&maptype=roadmap&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0x7ed5ff%7Clabel:%7C{{ contact.post_code }}"/>
+                                    <img src="https://maps.googleapis.com/maps/api/staticmap?center={{ contact.post_code }}
+                                    &zoom=13&scale=false&size=300x280&maptype=roadmap&format=png
+                                    &visual_refresh=true&markers=size:mid%7Ccolor:0x7ed5ff%7Clabel:%7C{{ contact.post_code }}&key=AIzaSyCM5DmW8zurLnIGhX588rU5W8idc_rlbNA"/>
                                 {% endif %}
                             </div>
                         </div>
