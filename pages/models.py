@@ -2,17 +2,17 @@ from datetime import date
 
 from django.db import models
 
-from wagtail.wagtailcore import blocks
-from wagtail.wagtailcore.models import Page, Orderable
-from wagtail.wagtailcore.fields import RichTextField, StreamField
-from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
-from wagtail.wagtailimages.models import Image
-from wagtail.wagtailsnippets.models import register_snippet
+from wagtail.core import blocks
+from wagtail.core.models import Page, Orderable
+from wagtail.core.fields import RichTextField, StreamField
+from wagtail.images.edit_handlers import ImageChooserPanel
+from wagtail.images.models import Image
+from wagtail.snippets.models import register_snippet
 from modelcluster.fields import ParentalKey
-from wagtail.wagtailadmin.edit_handlers import (
+from wagtail.admin.edit_handlers import (
     FieldPanel, MultiFieldPanel, InlinePanel, PageChooserPanel,
     StreamFieldPanel)
-from wagtail.wagtailsearch import index
+from wagtail.search import index
 from utils.models import LinkFields, RelatedLink, CarouselItem
 from wagtail.contrib.settings.models import BaseSetting, register_setting
 
@@ -192,7 +192,8 @@ class ContentBlock(LinkFields):
         Page,
         related_name='contentblocks',
         null=True,
-        blank=True
+        blank=True,
+        on_delete=models.CASCADE
     )
     title = models.CharField(max_length=255)
     body = RichTextField()
@@ -218,7 +219,8 @@ class Testimonial(LinkFields):
         Page,
         related_name='testimonials',
         null=True,
-        blank=True
+        blank=True,
+        on_delete=models.SET_NULL
     )
     name = models.CharField(max_length=150)
     photo = models.ForeignKey(
@@ -245,7 +247,8 @@ class Advert(LinkFields):
         Page,
         related_name='adverts',
         null=True,
-        blank=True
+        blank=True,
+        on_delete=models.SET_NULL
     )
     title = models.CharField(max_length=150, null=True)
     image = models.ForeignKey(

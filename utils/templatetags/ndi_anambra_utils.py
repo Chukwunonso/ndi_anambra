@@ -1,5 +1,5 @@
 from django import template
-from wagtail.wagtaildocs.models import Document
+from wagtail.documents.models import Document
 from contact.models import ContactPage
 from blog.models import BlogPage
 from events.models import EventPage

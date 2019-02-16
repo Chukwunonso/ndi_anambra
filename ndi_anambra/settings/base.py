@@ -55,20 +55,20 @@ INSTALLED_APPS = (
     'modelcluster',
     'dashboard',
 
-    'wagtail.contrib.wagtailsitemaps',
-    'wagtail.contrib.wagtailsearchpromotions',
+    'wagtail.contrib.sitemaps',
+    'wagtail.contrib.search_promotions',
     'wagtail.contrib.settings',
-    'wagtail.wagtailforms',
-    'wagtail.wagtailredirects',
-    'wagtail.wagtailembeds',
-    'wagtail.wagtailsites',
-    'wagtail.wagtailusers',
-    'wagtail.wagtailsnippets',
-    'wagtail.wagtaildocs',
-    'wagtail.wagtailimages',
-    'wagtail.wagtailsearch',
-    'wagtail.wagtailadmin',
-    'wagtail.wagtailcore',
+    'wagtail.contrib.forms',
+    'wagtail.contrib.redirects',
+    'wagtail.embeds',
+    'wagtail.sites',
+    'wagtail.users',
+    'wagtail.snippets',
+    'wagtail.documents',
+    'wagtail.images',
+    'wagtail.search',
+    'wagtail.admin',
+    'wagtail.core',
     'wagtailfontawesome',
     
     
@@ -96,8 +96,8 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
 
-    'wagtail.wagtailcore.middleware.SiteMiddleware',
-    'wagtail.wagtailredirects.middleware.RedirectMiddleware',
+    'wagtail.core.middleware.SiteMiddleware',
+    'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 )
 
 ROOT_URLCONF = 'ndi_anambra.urls'
@@ -203,7 +203,7 @@ WAGTAILSEARCH_RESULTS_TEMPLATE = 'utils/tags/search/search_results.html'
 # Use Elasticsearch as the search backend for extra performance search results
 # WAGTAILSEARCH_BACKENDS = {
 #     'default': {
-#         'BACKEND': 'wagtail.wagtailsearch.backends.elasticsearch.ElasticSearch',
+#         'BACKEND': 'wagtail.search.backends.elasticsearch.ElasticSearch',
 #         'INDEX': 'ndi_anambra',
 #     },
 # }
