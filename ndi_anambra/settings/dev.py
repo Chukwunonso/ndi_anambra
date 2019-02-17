@@ -7,7 +7,7 @@ DEBUG = env.bool('DJANGO_DEBUG', default=True)
 TEMPLATES[0]['OPTIONS']['debug'] = DEBUG
 
 INSTALLED_APPS += (
-    # 'debug_toolbar',
+    'debug_toolbar',
     'django_extensions',
 )
 
@@ -23,7 +23,7 @@ MEDUSA_DEPLOY_DIR = join(PROJECT_ROOT, 'static_build')
 SENDFILE_BACKEND = 'sendfile.backends.simple'
 
 # See: https://github.com/django-debug-toolbar/django-debug-toolbar#installation
-MIDDLEWARE_CLASSES += (
+MIDDLEWARE += (
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
