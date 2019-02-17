@@ -40,7 +40,7 @@ class SocialMediaSettings(BaseSetting):
 class HomePageContentItem(Orderable, LinkFields):
     page = ParentalKey('pages.HomePage', related_name='content_items')
     image = models.ForeignKey(
-        'wagtailimages.Image',
+        Image,
         null=True,
         blank=True,
         on_delete=models.SET_NULL,
@@ -77,8 +77,7 @@ class HomePage(Page):
         index.SearchField('body'),
     ]
 
-
-    def get_context(self, request):
+    def get_context(self, request, *args, **kwargs):
         context = super(HomePage, self).get_context(request)
         events = EventPage.objects.live().descendant_of(self)
         events = events.filter(date_from__gte=date.today())
@@ -87,6 +86,7 @@ class HomePage(Page):
 
     class Meta:
         verbose_name = "Homepage"
+
 
 HomePage.content_panels = [
     FieldPanel('title', classname="full title"),
@@ -117,6 +117,7 @@ class StandardIndexPage(Page):
     )
 
     indexed_fields = ('intro', )
+
 
 StandardIndexPage.content_panels = [
     FieldPanel('title', classname="full title"),
@@ -211,6 +212,7 @@ class ContentBlock(LinkFields):
     def __unicode__(self):
         return u"{0}[{1}]".format(self.title, self.slug)
 
+
 register_snippet(ContentBlock)
 
 
@@ -238,6 +240,7 @@ class Testimonial(LinkFields):
 
     def __unicode__(self):
         return self.name
+
 
 register_snippet(Testimonial)
 
@@ -267,6 +270,7 @@ class Advert(LinkFields):
     def __unicode__(self):
         return self.title
 
+
 register_snippet(Advert)
 
 
@@ -277,6 +281,7 @@ class FaqsPage(Page):
         ('faq_question', blocks.CharBlock(classname="full title")),
         ('faq_answer', blocks.RichTextBlock()),
     ])
+
 
 FaqsPage.content_panels = [
     FieldPanel('title', classname="full title"),

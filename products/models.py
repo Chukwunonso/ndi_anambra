@@ -41,7 +41,7 @@ class ProductIndexPage(Page):
         tag_ids = ProductPageTag.objects.all().values_list('tag_id', flat=True)
         return Tag.objects.filter(pk__in=tag_ids)
 
-    def get_context(self, request):
+    def get_context(self, request, *args, **kwargs):
         # Get products
         products = self.products
         # Filter by tag
@@ -63,6 +63,7 @@ class ProductIndexPage(Page):
         context = super(ProductIndexPage, self).get_context(request)
         context['products'] = products
         return context
+
 
 ProductIndexPage.content_panels = [
     FieldPanel('title', classname="full title"),
@@ -107,6 +108,7 @@ class ProductPage(Page):
     )
 
     indexed_fields = ('title', 'intro', 'biography')
+
 
 ProductPage.content_panels = [
     FieldPanel('title', classname="title"),

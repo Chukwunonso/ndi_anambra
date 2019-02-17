@@ -4,21 +4,24 @@ from wagtail.admin.edit_handlers import (
     FieldPanel, MultiFieldPanel, PageChooserPanel
 )
 from wagtail.core.fields import RichTextField
+from wagtail.core.models import Page, Orderable
 from wagtail.documents.edit_handlers import DocumentChooserPanel
+from wagtail.documents.models import Document
 from wagtail.images.edit_handlers import ImageChooserPanel
+from wagtail.images.models import Image
 
 
 class LinkFields(models.Model):
     link_external = models.URLField("External link", blank=True)
     link_page = models.ForeignKey(
-        'wagtailcore.Page',
+        Page,
         null=True,
         blank=True,
         related_name='+',
         on_delete=models.SET_NULL
     )
     link_document = models.ForeignKey(
-        'wagtaildocs.Document',
+        Document,
         null=True,
         blank=True,
         related_name='+',
@@ -74,7 +77,7 @@ class ContactFields(models.Model):
 
 class CarouselItem(LinkFields):
     image = models.ForeignKey(
-        'wagtailimages.Image',
+        Image,
         null=True,
         blank=True,
         on_delete=models.SET_NULL,

@@ -42,7 +42,7 @@ class PersonIndexPage(Page):
         tag_ids = PersonPageTag.objects.all().values_list('tag_id', flat=True)
         return Tag.objects.filter(pk__in=tag_ids)
 
-    def get_context(self, request):
+    def get_context(self, request, *args, **kwargs):
         # Get persons
         persons = self.persons
         # Filter by tag
@@ -64,6 +64,7 @@ class PersonIndexPage(Page):
         context = super(PersonIndexPage, self).get_context(request)
         context['persons'] = persons
         return context
+
 
 PersonIndexPage.content_panels = [
     FieldPanel('title', classname="full title"),
@@ -119,6 +120,7 @@ class PersonPage(Page, ContactFields):
     )
 
     indexed_fields = ('title', 'intro', 'biography')
+
 
 PersonPage.content_panels = [
     FieldPanel('title', classname="title"),

@@ -6,6 +6,7 @@ from wagtail.core.models import Page
 from wagtail.admin.edit_handlers import FieldPanel, MultiFieldPanel
 from wagtail.documents.models import Document
 from wagtail.images.edit_handlers import ImageChooserPanel
+from wagtail.images.models import Image
 from wagtail.search import index
 
 from modelcluster.fields import ParentalKey
@@ -29,7 +30,7 @@ class DocumentsIndexPage(Page):
     ]
 
     feed_image = models.ForeignKey(
-        'wagtailimages.Image',
+        Image,
         null=True,
         blank=True,
         on_delete=models.SET_NULL,
@@ -40,7 +41,7 @@ class DocumentsIndexPage(Page):
     def children(self):
         return self.get_children().live()
 
-    def get_context(self, request):
+    def get_context(self, request, *args, **kwargs):
         # Get list of live Gallery pages that are descendants of this page
         pages = DocumentsPage.objects.live().descendant_of(self)
 
@@ -81,7 +82,7 @@ class DocumentsPage(Page):
     tags = ClusterTaggableManager(through=DocumentsPageTag, blank=True)
 
     feed_image = models.ForeignKey(
-        'wagtailimages.Image',
+        Image,
         null=True,
         blank=True,
         on_delete=models.SET_NULL,
@@ -93,7 +94,7 @@ class DocumentsPage(Page):
         # Find closest ancestor which is a Gallery index
         return self.get_ancestors().type(DocumentsIndexPage).last()
 
-    def get_context(self, request):
+    def get_context(self, request, *args, **kwargs):
         # Get tags and convert them into list so we can iterate over them
         tags = self.tags.values_list('name', flat=True)
 
@@ -124,6 +125,7 @@ class DocumentsPage(Page):
 
     class Meta:
         verbose_name = "Documents Page"
+
 
 DocumentsPage.content_panels = [
     FieldPanel('title', classname="full title"),

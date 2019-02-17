@@ -9,6 +9,7 @@ from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.admin.edit_handlers import (
     FieldPanel, MultiFieldPanel, InlinePanel
 )
+from wagtail.images.models import Image
 from wagtail.search import index
 
 from modelcluster.contrib.taggit import ClusterTaggableManager
@@ -44,7 +45,7 @@ class EventIndexPage(Page):
 
         return events
 
-    def get_context(self, request):
+    def get_context(self, request, *args, **kwargs):
             # Get events
             events = self.events
             # Filter by tag
@@ -71,6 +72,7 @@ class EventIndexPage(Page):
             ).distinct().order_by('name')
             return context
 
+
 EventIndexPage.content_panels = [
     FieldPanel('title', classname="full title"),
     FieldPanel('intro', classname="full"),
@@ -92,7 +94,7 @@ class EventPageSpeaker(Orderable, LinkFields):
     page = ParentalKey('events.EventPage', related_name='speakers')
     full_name = models.CharField("Name", max_length=255, blank=True)
     image = models.ForeignKey(
-        'wagtailimages.Image',
+        Image,
         null=True,
         blank=True,
         on_delete=models.SET_NULL,
@@ -133,7 +135,7 @@ class EventPage(Page):
     cost = models.CharField(max_length=255, null=True, blank=True)
     signup_link = models.URLField(blank=True)
     feed_image = models.ForeignKey(
-        'wagtailimages.Image',
+        Image,
         null=True,
         blank=True,
         on_delete=models.SET_NULL,
@@ -152,7 +154,7 @@ class EventPage(Page):
     def event_index(self):
         return self.get_ancestors().type(EventIndexPage).last()
 
-    def serve(self, request):
+    def serve(self, request, *args, **kwargs):
         if "format" in request.GET:
             if request.GET['format'] == 'ical':
                 # Export to ical format
@@ -170,6 +172,7 @@ class EventPage(Page):
                 return HttpResponse(message, content_type='text/plain')
         else:
             return super(EventPage, self).serve(request)
+
 
 EventPage.content_panels = [
     FieldPanel('title', classname="full title"),

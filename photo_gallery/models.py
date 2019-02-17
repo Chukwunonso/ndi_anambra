@@ -29,7 +29,7 @@ class GalleryIndexPage(Page):
     ]
 
     feed_image = models.ForeignKey(
-        'wagtailimages.Image',
+        Image,
         null=True,
         blank=True,
         on_delete=models.SET_NULL,
@@ -40,7 +40,7 @@ class GalleryIndexPage(Page):
     def children(self):
         return self.get_children().live()
 
-    def get_context(self, request):
+    def get_context(self, request, *args, **kwargs):
         # Get list of live Gallery pages that are descendants of this page
         pages = GalleryPage.objects.live().descendant_of(self)
 
@@ -82,7 +82,7 @@ class GalleryPage(Page):
     tags = ClusterTaggableManager(through=GalleryPageTag, blank=True)
 
     feed_image = models.ForeignKey(
-        'wagtailimages.Image',
+        Image,
         null=True,
         blank=True,
         on_delete=models.SET_NULL,
@@ -94,7 +94,7 @@ class GalleryPage(Page):
         # Find closest ancestor which is a Gallery index
         return self.get_ancestors().type(GalleryIndexPage).last()
 
-    def get_context(self, request):
+    def get_context(self, request, *args, **kwargs):
         # Get tags and convert them into list so we can iterate over them
         tags = self.tags.values_list('name', flat=True)
 
@@ -124,6 +124,7 @@ class GalleryPage(Page):
 
     class Meta:
         verbose_name = "Gallery Page"
+
 
 GalleryPage.content_panels = [
     FieldPanel('title', classname="full title"),

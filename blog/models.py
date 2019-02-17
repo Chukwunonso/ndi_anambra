@@ -6,6 +6,7 @@ from wagtail.core.models import Page, Orderable
 from wagtail.core.fields import RichTextField, StreamField
 from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.images.blocks import ImageChooserBlock
+from wagtail.images.models import Image
 
 from wagtail.search import index
 
@@ -39,7 +40,7 @@ class BlogIndexPage(Page):
 
         return blogs
 
-    def get_context(self, request):
+    def get_context(self, request, *args, **kwargs):
         # Get blogs
         blogs = self.blogs
 
@@ -62,6 +63,7 @@ class BlogIndexPage(Page):
         context = super(BlogIndexPage, self).get_context(request)
         context['blogs'] = blogs
         return context
+
 
 BlogIndexPage.content_panels = [
     FieldPanel('title', classname="full title"),
@@ -96,7 +98,7 @@ class BlogPage(Page):
     tags = ClusterTaggableManager(through=BlogPageTag, blank=True)
     date = models.DateField("Post date")
     feed_image = models.ForeignKey(
-        'wagtailimages.Image',
+        Image,
         null=True,
         blank=True,
         on_delete=models.SET_NULL,
@@ -111,6 +113,7 @@ class BlogPage(Page):
     def blog_index(self):
         # Find closest ancestor which is a blog index
         return self.get_ancestors().type(BlogIndexPage).last()
+
 
 BlogPage.content_panels = [
     FieldPanel('title', classname="full title"),
