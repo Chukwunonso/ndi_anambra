@@ -1,4 +1,4 @@
-.idea/workspace.xml
+/.idea/
 *.pyc
 .DS_Store
 *.swp
@@ -14,7 +14,6 @@ ansible/ndi_anambra_keystore/*
 ansible/group_vars/*
 ansible/host_vars/*
 .env
-secrets.md
 env.example
 env.production
 pages/static/libs
