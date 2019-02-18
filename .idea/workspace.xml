@@ -1,41 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c11b8cb-3c19-4e66-846e-8f331dd875cd" name="Default" comment="Removed wagtail medusa from dev.&#10;Changed the embed tag to new style&#10;Upgraded to wagtail 1.13">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ndi_anambra.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ndi_anambra.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0003_auto_20160920_1219.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/migrations/0003_auto_20160920_1219.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0004_auto_20170408_1403.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/migrations/0004_auto_20170408_1403.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents_gallery/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents_gallery/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents_gallery/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents_gallery/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/events/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/events/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ndi_anambra/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/ndi_anambra/settings/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ndi_anambra/settings/production.py" beforeDir="false" afterPath="$PROJECT_DIR$/ndi_anambra/settings/production.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ndi_anambra/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ndi_anambra/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/migrations/0003_advert.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/migrations/0003_advert.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/migrations/0005_auto_20151021_1630.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/migrations/0005_auto_20151021_1630.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/wagtail_hooks.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/wagtail_hooks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/people/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/people/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/people/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/people/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo_gallery/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/photo_gallery/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo_gallery/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/photo_gallery/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements/base.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements/base.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements/dev.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements/dev.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements/production.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements/production.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/templatetags/navigation_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/templatetags/navigation_tags.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/templatetags/ndi_anambra_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/templatetags/ndi_anambra_utils.py" afterDir="false" />
-    </list>
+    <list default="true" id="7c11b8cb-3c19-4e66-846e-8f331dd875cd" name="Default" comment="Removed wagtail medusa from dev.&#10;Changed the embed tag to new style&#10;Upgraded to wagtail 1.13" />
     <ignored path="ndi_anambra.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -60,18 +26,39 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ndi_anambra/settings/base.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="262">
+              <caret line="218" selection-start-line="218" selection-end-line="218" />
+              <folding>
+                <element signature="e#264#278#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dashboard/models.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/documents_gallery/models.py">
+        <entry file="file://$PROJECT_DIR$/problems_encountered">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="82" column="24" selection-start-line="82" selection-start-column="24" selection-end-line="82" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="299">
+              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/secrets.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-446">
+                <caret line="1" selection-start-line="1" selection-end-line="1" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -79,7 +66,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/events/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
+            <state relative-caret-position="1110">
               <caret line="93" column="19" selection-start-line="93" selection-start-column="19" selection-end-line="93" selection-end-column="19" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
@@ -89,25 +76,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/models.py">
+        <entry file="file://$PROJECT_DIR$/requirements/base.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="75" column="19" selection-start-line="75" selection-start-column="19" selection-end-line="75" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="210">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -115,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/people/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="105" column="19" selection-start-line="105" selection-start-column="19" selection-end-line="105" selection-end-column="19" />
+            <state relative-caret-position="705">
+              <caret line="65" column="21" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -125,27 +97,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/wagtail_hooks.py">
+        <entry file="file://$PROJECT_DIR$/events/tests.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="240">
+              <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ndi_anambra/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ansible/restore_site.yml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -218,7 +185,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ansible/ndi_anambra_keystore/authorized_keys" />
         <option value="$PROJECT_DIR$/ansible/ndi_anambra_keystore/ndianambraaberdeen.org-naa_web-deploy_keys_old.pub" />
         <option value="$PROJECT_DIR$/ansible/update_env.yml" />
         <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/wagtail/project_template/manage.py" />
@@ -251,7 +217,6 @@
         <option value="$PROJECT_DIR$/photo_gallery/templates/photo_gallery/gallery_page.html" />
         <option value="$PROJECT_DIR$/pages/templates/base.html" />
         <option value="$PROJECT_DIR$/pages/templates/dashboard/templates/wagtailadmin/base.html" />
-        <option value="$PROJECT_DIR$/problems_encountered" />
         <option value="$PROJECT_DIR$/dashboard/templates/wagtailadmin/admin_base.html" />
         <option value="$PROJECT_DIR$/pages/static/humans.txt" />
         <option value="$PROJECT_DIR$/dashboard/templates/wagtailadmin/login.html" />
@@ -269,6 +234,8 @@
         <option value="$PROJECT_DIR$/pages/models.py" />
         <option value="$PROJECT_DIR$/pages/wagtail_hooks.py" />
         <option value="$PROJECT_DIR$/ndi_anambra/urls.py" />
+        <option value="$PROJECT_DIR$/problems_encountered" />
+        <option value="$PROJECT_DIR$/secrets.md" />
       </list>
     </option>
   </component>
@@ -283,7 +250,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -291,15 +257,11 @@
               <item name="ndi_anambra" type="b2602c69:ProjectViewProjectNode" />
               <item name="ndi_anambra" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ndi_anambra" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ndi_anambra" type="462c0819:PsiDirectoryNode" />
-              <item name="ansible" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -418,8 +380,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Django server.runserver" />
       <item itemvalue="Python.production" />
+      <item itemvalue="Django server.runserver" />
     </list>
     <recent_temporary>
       <list>
@@ -478,16 +440,15 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4891000" />
+    <option name="totallyTimeSpent" value="5382000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="26" y="23" width="1252" height="709" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" id="Project" order="0" visible="true" weight="0.23305786" />
+      <window_info active="true" id="Project" order="0" visible="true" weight="0.23636363" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32984293" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -501,12 +462,13 @@
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32984293" />
       <window_info anchor="bottom" id="Python Console" order="12" />
-      <window_info anchor="right" id="SciView" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="Data View" order="4" />
+      <window_info anchor="right" id="SciView" order="5" />
     </layout>
     <layout-to-restore>
       <window_info id="Project" order="0" visible="true" weight="0.23233144" />
@@ -554,9 +516,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added dashboard logo, welcome and favicon" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/media/images/foundation.width-1200.jpg" />
-    <entry file="file://$PROJECT_DIR$/media/images/placeholder_person.2e16d0ba.fill-400x400.png" />
-    <entry file="file://$PROJECT_DIR$/media/images/wagtail.max-165x165.jpg" />
     <entry file="file://$PROJECT_DIR$/media/images/wagtail.max-165x165.png" />
     <entry file="file://$PROJECT_DIR$/media/images/wagtail.max-900x400.jpg" />
     <entry file="file://$PROJECT_DIR$/media/images/wagtail.width-800.jpg" />
@@ -568,17 +527,14 @@
     <entry file="file://$PROJECT_DIR$/media/images/naa.max-165x165.jpg" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding />
+        <state relative-caret-position="240">
+          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/wagtail/project_template/search/templates/search/search.html" />
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/wagtail/project_template/home/templates/home/home_page.html" />
     <entry file="file://$PROJECT_DIR$/pages/templates/dashboard/templates/wagtailadmin/base.html" />
-    <entry file="file://$PROJECT_DIR$/problems_encountered">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/templates/wagtailadmin/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -647,9 +603,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog/migrations/0003_auto_20160920_1219.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/migrations/0003_auto_20160920_1219.py" />
     <entry file="file://$PROJECT_DIR$/ndi_anambra/settings/dev.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -666,8 +620,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ndi_anambra/settings/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="66" column="23" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
+        <state relative-caret-position="262">
+          <caret line="218" selection-start-line="218" selection-end-line="218" />
+          <folding>
+            <element signature="e#264#278#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -727,7 +684,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/events/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
+        <state relative-caret-position="1110">
           <caret line="93" column="19" selection-start-line="93" selection-start-column="19" selection-end-line="93" selection-end-column="19" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
@@ -747,8 +704,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/people/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="105" column="19" selection-start-line="105" selection-start-column="19" selection-end-line="105" selection-end-column="19" />
+        <state relative-caret-position="705">
+          <caret line="65" column="21" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
@@ -765,9 +722,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog/migrations/0004_auto_20170408_1403.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/migrations/0004_auto_20170408_1403.py" />
     <entry file="file://$PROJECT_DIR$/pages/wagtail_hooks.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -797,6 +752,39 @@
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/deploy.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/problems_encountered">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events/event_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/secrets.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-446">
+            <caret line="1" selection-start-line="1" selection-end-line="1" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
