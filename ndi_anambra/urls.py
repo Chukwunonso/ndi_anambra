@@ -4,12 +4,13 @@ from django.conf import settings
 from django.contrib import admin
 
 from wagtail.admin import urls as wagtailadmin_urls
-from wagtail.search import urls as wagtailsearch_urls
 from wagtail.documents import urls as wagtaildocs_urls
 from wagtail.core import urls as wagtail_urls
 from wagtail.contrib.sitemaps.views import sitemap
 
 from wagtail_feeds.feeds import BasicFeed, ExtendedFeed
+
+from utils.views import search
 
 admin.autodiscover()
 
@@ -18,7 +19,7 @@ urlpatterns = [
     url(r'^django-admin/', admin.site.urls),
 
     url(r'^akawo/', include(wagtailadmin_urls)),
-    # url(r'^search/', include(wagtailsearch_urls)),
+    url(r'^search/', view=search, name='search'),
     url(r'^documents/', include(wagtaildocs_urls)),
 
     url('^sitemap\.xml$', sitemap),

@@ -17,7 +17,7 @@ COMPRESS_CSS_FILTERS = [
     'compressor.filters.cssmin.CSSMinFilter',
 ]
 
-ALLOWED_HOSTS = [env("DJANGO_ALLOWED_HOST_NAME"), ]
+ALLOWED_HOSTS = env("DJANGO_ALLOWED_HOST_NAME").split(',')
 
 DATABASES['default'] = env.db('PROD_DATABASE_URL')
 
